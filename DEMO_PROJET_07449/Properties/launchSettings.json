@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "DEMO_PROJET_07449": {
+      "commandName": "Project"
+    },
+    "Test-Marc": {
+      "commandName": "Project",
+      "commandLineArgs": "test-marc"
+    },
+    "POTATOEEEESSS": {
+      "commandName": "Project",
+      "commandLineArgs": "do-potatoes"
+    }
+  }
+}
