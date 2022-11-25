@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Business\Services\" />
     <Folder Include="GUI\Views\" />
     <Folder Include="Utils\" />
   </ItemGroup>

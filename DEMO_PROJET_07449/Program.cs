@@ -1,3 +1,4 @@
+using DEMO_PROJET_07449.Business.Services;
 using System.Diagnostics;
 
 namespace DEMO_PROJET_07449;
@@ -18,8 +19,7 @@ internal static class Program {
             DoPotatoes();
 
         } else {
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            MainService.GetInstance().StartApplication();
         }
     }
 
