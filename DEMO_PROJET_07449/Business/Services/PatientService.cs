@@ -17,8 +17,19 @@ public class PatientService : IService {
 
     public PatientDTO CreateNewPatient(string firstName, string lastName, string healthCardNumber) {
         PatientDTO patient = new PatientDTO(firstName, lastName, healthCardNumber);
-        this.patientDAO.Create(patient);
-        return patient;
+        return this.patientDAO.Create(patient);
+    }
+
+    public PatientDTO CreateNewPatient(PatientDTO newPatient) {
+        return this.patientDAO.Create(newPatient);
+    }
+
+    public PatientDTO SaveModifiedPatient(PatientDTO patient) {
+        return this.patientDAO.Update(patient);
+    }
+
+    public PatientDTO DeletePatient(PatientDTO patient) {
+        return this.patientDAO.Delete(patient);
     }
 
 }

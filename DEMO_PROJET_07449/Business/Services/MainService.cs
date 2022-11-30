@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace DEMO_PROJET_07449.Business.Services;
 public class MainService : IService {
-    private ProjectContext _projectContext;
-    private PatientService _patientService;
-    private AppointmentService _appointmentService;
+    private ProjectContext projectContext;
+    private PatientService patientService;
+    private AppointmentService appointmentService;
 
     private static MainService INSTANCE;
 
     private MainService() {
         ApplicationConfiguration.Initialize();
-        this._projectContext = new ProjectContext();
-        this._patientService = new PatientService(this._projectContext);
-        this._appointmentService = new AppointmentService(this._projectContext);
+        this.projectContext = new ProjectContext();
+        this.patientService = new PatientService(this.projectContext);
+        this.appointmentService = new AppointmentService(this.projectContext);
     }
 
     public static MainService GetInstance() {
@@ -37,10 +37,10 @@ public class MainService : IService {
     }
 
     public PatientService GetPatientService() {
-        return this._patientService;
+        return this.patientService;
     }
 
     public AppointmentService GetAppointmentService() {
-        return this._appointmentService;
+        return this.appointmentService;
     }
 }
